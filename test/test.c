@@ -7,4 +7,6 @@ int main(void)
 	bzero_test_compare_bzero();
 
 	isalpha_test_compare_isalpha();
+
+	isdigit_test_compare_isdigit();
 }
