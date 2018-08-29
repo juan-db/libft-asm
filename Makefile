@@ -1,23 +1,20 @@
 NAME = libfts.a
 SOURCE = ft_bzero.s \
-		 ft_isalpha.s
+		 ft_isalpha.s \
+		 ft_isdigit.s
 OBJECT = $(SOURCE:.s=.o)
 
 TEST_NAME = tests
-TEST_SOURCE = ft_bzero_test.c
+TEST_SOURCE = test/test.c \
+					test/ft_bzero_test.c \
+					test/ft_isalpha_test.c
 TEST_OBJECT = $(TEST_SOURCE:.c=.o)
-
-# CSRC=ft_bzero_test.c
-# OBJ=$(ASMSRC:.s=.o) $(CSRC:.c=.o)
-
-# CC = gcc
-# CCFLAGS = -Wall -Werror -Wextra
 
 AS = nasm
 ASFLAGS = -f elf64
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -I.
 
 all: $(NAME)
 
@@ -32,6 +29,7 @@ fclean: clean
 
 re: fclean all
 
+# Tests
 runtests: $(NAME) $(TEST_OBJECT)
 	gcc -o $(TEST_NAME) $(TEST_OBJECT) -L. -lfts
 	./$(TEST_NAME)

@@ -7,7 +7,7 @@
 
 void ft_bzero(void* s, size_t n);
 
-int test_input_validation()
+int bzero_test_input_validation()
 {
 	// Assign
 	char* buff = NULL;
@@ -19,7 +19,7 @@ int test_input_validation()
 	return 0;
 }
 
-int test_input_validation_2()
+int bzero_test_input_validation_2()
 {
 	// Assign
 	char* buff = (char*)1;
@@ -31,7 +31,7 @@ int test_input_validation_2()
 	return 0;
 }
 
-int test_compare_bzero()
+int bzero_test_compare_bzero()
 {
 	// Assign
 	char chars1[ARRAY_LENGTH];
@@ -56,13 +56,4 @@ int test_compare_bzero()
 	{
 		return 0;
 	}
-}
-
-int main(void)
-{
-	test_input_validation();
-	test_input_validation_2();
-	test_compare_bzero();
-
-	return 0;
 }
