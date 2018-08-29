@@ -11,5 +11,7 @@ int bzero_test_compare_bzero();
 void isalpha_test_compare_isalpha();
 // isdigit
 void isdigit_test_compare_isdigit();
+// isalnum
+void isalnum_test_compare_isalnum();
 
 #endif

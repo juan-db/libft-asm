@@ -1,14 +1,16 @@
 NAME = libfts.a
 SOURCE = ft_bzero.s \
 		 ft_isalpha.s \
-		 ft_isdigit.s
+		 ft_isdigit.s \
+		 ft_isalnum.s
 OBJECT = $(SOURCE:.s=.o)
 
 TEST_NAME = tests
 TEST_SOURCE = test/test.c \
 			  test/ft_bzero_test.c \
 			  test/ft_isalpha_test.c \
-			  test/ft_isdigit_test.c
+			  test/ft_isdigit_test.c \
+			  test/ft_isalnum_test.c
 TEST_OBJECT = $(TEST_SOURCE:.c=.o)
 
 AS = nasm
