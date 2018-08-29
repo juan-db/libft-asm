@@ -10,14 +10,14 @@ void test_compare_isalpha()
 	{
 		int expected = isalpha(c);
 		int actual = ft_isalpha(c);
-		if (actual != expected)
+		if ((actual && !expected) || (!actual && expected))
 		{
 			fprintf(stderr, "ft_isalpha does not match isalpha with value %hhu ('%c')\nExpected: %d; Actual: %d\n", c, c, expected, actual);
 		}
 	}
 	int expected = isalpha(c);
 	int actual = ft_isalpha(c);
-	if (actual != expected)
+	if ((actual && !expected) || (!actual && expected))
 	{
 		fprintf(stderr, "ft_isalpha does not match isalpha with value %hhu ('%c')\nExpected: %d; Actual: %d\n", c, c, expected, actual);
 	}
