@@ -7,7 +7,32 @@
 
 void ft_bzero(void* s, size_t n);
 
-int main(void) {
+int test_input_validation()
+{
+	// Assign
+	char* buff = NULL;
+	size_t count = 2;
+
+	// Act
+	ft_bzero(buff, count);
+
+	return 0;
+}
+
+int test_input_validation_2()
+{
+	// Assign
+	char* buff = (char*)1;
+	size_t count = 0;
+
+	// Act
+	ft_bzero(buff, count);
+
+	return 0;
+}
+
+int test_compare_bzero()
+{
 	// Assign
 	char chars1[ARRAY_LENGTH];
 	char chars2[ARRAY_LENGTH];
@@ -31,4 +56,13 @@ int main(void) {
 	{
 		return 0;
 	}
+}
+
+int main(void)
+{
+	test_input_validation();
+	test_input_validation_2();
+	test_compare_bzero();
+
+	return 0;
 }
