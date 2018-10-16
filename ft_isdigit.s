@@ -11,10 +11,8 @@ ft_isdigit:
 
 equal:
 	mov rax, 1		; move 1 into %rax, 1st return register
-	jmp end
+	ret
 
 not_equal:
 	mov rax, 0		; move 0 into %rax, 1st return register
-
-end:
 	ret

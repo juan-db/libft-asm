@@ -24,11 +24,8 @@ test_upper:
 
 equal:
 	mov rax, 1
-	jmp end
-
+	ret
 
 not_equal:
 	mov rax, 0
-
-end:
 	ret
