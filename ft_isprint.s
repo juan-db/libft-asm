@@ -1,8 +1,8 @@
 section .text
-	global ft_isprint
+	global _ft_isprint
 
 ; rdi number to check
-ft_isprint:
+_ft_isprint:
 	cmp rdi, 40q
 	jl not_equal
 	cmp rdi, 176q

@@ -1,8 +1,8 @@
 section .text
-	global ft_isalpha
+	global _ft_isalpha
 
 ; rdi - character to check
-ft_isalpha:
+_ft_isalpha:
 	; test if the number is a lowercase character
 	; test rdi >= 'a' && rdi <= 'z'
 	cmp rdi, 'a'	; compare 'a' to the first argument

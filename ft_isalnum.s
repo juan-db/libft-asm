@@ -1,17 +1,17 @@
 section .text
-	extern ft_isdigit
-	extern ft_isalpha
+	extern _ft_isdigit
+	extern _ft_isalpha
 
-	global ft_isalnum
+	global _ft_isalnum
 
-ft_isalnum:
+_ft_isalnum:
 	mov r11, rdi
-	call ft_isdigit
+	call _ft_isdigit
 	cmp rax, 0
 	jne equal
 
 	mov rdi, r11
-	call ft_isalpha
+	call _ft_isalpha
 	cmp rax, 0
 	je not_equal
 

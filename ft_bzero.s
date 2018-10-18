@@ -1,9 +1,9 @@
 section .text
-	global ft_bzero
+	global _ft_bzero
 
 ; rdi - address of memory to clear
 ; rsi - amount of bytes to clear
-ft_bzero:
+_ft_bzero:
 	; validation
 	cmp rdi, 0
 	jle end

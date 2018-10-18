@@ -1,8 +1,8 @@
 section .text
-	global ft_isdigit
+	global _ft_isdigit
 
 ; rdi - number to check
-ft_isdigit:
+_ft_isdigit:
 	; test %rdi >= '0' && %rdi <= '9'
 	cmp rdi, '0'
 	jl not_equal
