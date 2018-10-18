@@ -21,4 +21,9 @@ int strlen_test_input_validation_null_str();
 int strlen_test_compare_strlen();
 int strlen_test_compare_strlen_empty_string();
 
+// puts
+int puts_test_input_validation_null_str();
+int puts_test_compare_puts();
+int puts_test_compare_puts_empty_string();
+
 #endif
