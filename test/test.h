@@ -8,10 +8,17 @@ int bzero_test_compare_bzero();
 
 // is...
 // isalpha
-void isalpha_test_compare_isalpha();
+int isalpha_test_compare_isalpha();
 // isdigit
-void isdigit_test_compare_isdigit();
+int isdigit_test_compare_isdigit();
 // isalnum
-void isalnum_test_compare_isalnum();
+int isalnum_test_compare_isalnum();
+// isprint
+int isprint_test_compare_isprint();
+
+// strlen
+int strlen_test_input_validation_null_str();
+int strlen_test_compare_strlen();
+int strlen_test_compare_strlen_empty_string();
 
 #endif

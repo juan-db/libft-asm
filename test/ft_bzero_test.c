@@ -7,6 +7,9 @@
 
 void ft_bzero(void* s, size_t n);
 
+/**
+ *	Returns non-zero if the test fails.
+ */
 int bzero_test_input_validation()
 {
 	// Assign
@@ -19,6 +22,9 @@ int bzero_test_input_validation()
 	return 0;
 }
 
+/**
+ *	Returns non-zero if the test fails.
+ */
 int bzero_test_input_validation_2()
 {
 	// Assign
@@ -31,6 +37,9 @@ int bzero_test_input_validation_2()
 	return 0;
 }
 
+/**
+ *	Returns non-zero if the test fails.
+ */
 int bzero_test_compare_bzero()
 {
 	// Assign
@@ -49,7 +58,7 @@ int bzero_test_compare_bzero()
 
 	if (result != 0)
 	{
-		fprintf(stderr, "ft_bzero behaviour does not match bzero...");
+		fprintf(stderr, "\033[31mft_bzero behaviour does not match bzero...\n\033[0m");
 		return 1;
 	}
 	else
