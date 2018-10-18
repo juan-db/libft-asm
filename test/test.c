@@ -42,4 +42,14 @@ int main(void)
 		puts_result = 1;
 	if (!puts_result)
 		printf("\033[32mAll \033[4mputs\033[0m\033[32m tests passed!\033[0m\n");
+
+	int strcat_result = 0;
+	if (strcat_test_input_validation_null_str())
+		strcat_result = 1;
+	if (strcat_test_compare_strcat())
+		strcat_result = 1;
+	if (strcat_test_compare_strcat_empty_string())
+		strlen_result = 1;
+	if (!strcat_result)
+		printf("\033[32mAll \033[4mstrcat\033[0m\033[32m tests passed!\033[0m\n");
 }

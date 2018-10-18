@@ -5,7 +5,8 @@ SOURCE = ft_bzero.s \
 		 ft_isalnum.s \
 		 ft_isprint.s \
 		 ft_strlen.s \
-		 ft_puts.s
+		 ft_puts.s \
+		 ft_strcat.s
 OBJECT = $(SOURCE:.s=.o)
 
 TEST_NAME = tests
@@ -16,7 +17,8 @@ TEST_SOURCE = test/test.c \
 			  test/ft_isalnum_test.c \
 			  test/ft_isprint_test.c \
 			  test/ft_strlen_test.c \
-			  test/ft_puts_test.c
+			  test/ft_puts_test.c \
+			  test/ft_strcat_test.c
 TEST_OBJECT = $(TEST_SOURCE:.c=.o)
 
 AS = nasm

@@ -26,4 +26,9 @@ int puts_test_input_validation_null_str();
 int puts_test_compare_puts();
 int puts_test_compare_puts_empty_string();
 
+// strcat
+int strcat_test_input_validation_null_str();
+int strcat_test_compare_strcat();
+int strcat_test_compare_strcat_empty_string();
+
 #endif
