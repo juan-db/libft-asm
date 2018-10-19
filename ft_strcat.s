@@ -4,36 +4,32 @@ section .text
 ; rdi - s1
 ; rsi - s2
 _ft_strcat:
+	; check s1 and s2 for null
 	cmp rdi, 0
 	je null
 	cmp rsi, 0
 	je null
 
-	; keep reference to rdi for return
-	mov r11, rdi
+	; keep references to rdi & rsi
+	mov r10, rdi
+	mov r11, rsi
 
 	; find end of s1
 	cld
 	mov rcx, -1
 	mov al, 0
 	repne scasb
-	mov r10, rdi
-	not rcx
-	dec rcx
-	add r10, rcx
+	dec rdi
 
 	; find end of s2
-	mov rdi, rsi
+	xchg rdi, rsi
 	mov rcx, -1
 	repne scasb
 
 	; copy s2 onto end of s1
+	mov rdi, rsi ; rdi - movs destination, therefore rdi == s1 + strlen(s1)
+	mov rsi, r11 ; rsi - movs source, therefore rsi == s2
 	not rcx
-	dec rcx
-	std
-	mov rsi, rdi
-	mov rdi, r10
-	add rdi, rcx
 	rep movsb
 
 	; return value - rdi (s1)

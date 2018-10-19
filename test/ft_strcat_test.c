@@ -11,8 +11,8 @@ int strcat_test_input_validation_null_str()
 
 int strcat_test_compare_strcat()
 {
-	char expected[14];
-	char actual[14];
+	char expected[15];
+	char actual[15];
 	const char* str1 = "Hello, ";
 	const char* str2 = "World!";
 	strcpy(expected, str1);
@@ -34,8 +34,8 @@ int strcat_test_compare_strcat()
 
 int strcat_test_compare_strcat_empty_string()
 {
-	char expected[1];
-	char actual[1];
+	char expected[2];
+	char actual[2];
 	const char* str1 = "";
 	const char* str2 = "";
 	strcpy(expected, str1);
