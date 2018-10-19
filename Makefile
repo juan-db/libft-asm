@@ -10,7 +10,8 @@ SOURCE = source/ft_bzero.s \
 		 source/ft_tolower.s \
 		 source/ft_puts.s \
 		 source/ft_strlen.s \
-		 source/ft_memset.s
+		 source/ft_memset.s \
+		 source/ft_memcpy.s
 INCLUDE = -Iinclude
 OBJECT = $(SOURCE:.s=.o)
 
@@ -22,11 +23,8 @@ TEST_SOURCE = test/test.c \
 			  test/ft_tox_test.c \
 			  test/ft_puts_test.c \
 			  test/ft_strlen_test.c \
-			  test/ft_memset_test.c
-			  # test/ft_isalpha_test.c \
-			  # test/ft_isdigit_test.c \
-			  # test/ft_isalnum_test.c \
-			  # test/ft_isprint_test.c \
+			  test/ft_memset_test.c \
+			  test/ft_memcpy_test.c
 TEST_INCLUDE = -Itest
 
 TEST_OBJECT = $(TEST_SOURCE:.c=.o)

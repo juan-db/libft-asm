@@ -52,6 +52,7 @@ int main(void)
 							   &strlen_test_compare_strlen_empty_string};
 	test_suite("strlen", strlen_tests, sizeof(strlen_tests) / sizeof(test_fun));
 
+
 	// ========= memset =========
 	test_fun memset_tests[] = {&memset_test_input_validation_null_str,
 							   &memset_test_input_validation_negative_len,
@@ -59,6 +60,15 @@ int main(void)
 							   &memset_test_compare_memset_larger_than_char_value,
 							   &memset_test_compare_memset_zero_nbyte};
 	test_suite("memset", memset_tests, sizeof(memset_tests) / sizeof(test_fun));
+
+
+	// ========= memset =========
+	test_fun memcpy_tests[] = {&memcpy_test_input_validation_null_dest,
+							   &memcpy_test_input_validation_null_src,
+							   &memcpy_test_input_validation_negative_n,
+							   &memcpy_test_compare_memcpy,
+							   &memcpy_test_compare_memcpy_zero_nbyte};
+	test_suite("memcpy", memcpy_tests, sizeof(memcpy_tests) / sizeof(test_fun));
 }
 
 static void test_suite(const char *name, test_fun* test_funs, int test_count)
@@ -79,5 +89,5 @@ static void test_suite(const char *name, test_fun* test_funs, int test_count)
 
 static void tests_passed_print(const char* name)
 {
-	printf("\033[32mAll \033[4m%s\033[0m\033[32m tests passed!\033[0m\n", name);
+	fprintf(stderr, "\033[32mAll \033[4m%s\033[0m\033[32m tests passed!\033[0m\n", name);
 }

@@ -38,4 +38,11 @@ int memset_test_compare_memset();
 int memset_test_compare_memset_larger_than_char_value();
 int memset_test_compare_memset_zero_nbyte();
 
+// memcpy
+int memcpy_test_input_validation_null_dest();
+int memcpy_test_input_validation_null_src();
+int memcpy_test_input_validation_negative_n();
+int memcpy_test_compare_memcpy();
+int memcpy_test_compare_memcpy_zero_nbyte();
+
 #endif
