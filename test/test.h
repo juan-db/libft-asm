@@ -14,6 +14,7 @@ int bzero_test_compare_bzero();
  */
 typedef int(*ctype_fun)(int);
 int ctype_test_compare_ctype(const char *name, ctype_fun ft_ctype, ctype_fun ctype);
+int tox_test_compare_tox(const char *name, ctype_fun ft_ctype, ctype_fun ctype);
 
 // strlen
 int strlen_test_input_validation_null_str();

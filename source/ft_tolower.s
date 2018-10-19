@@ -6,7 +6,7 @@ _ft_tolower:
 	jl end
 	cmp rdi, 90
 	jg end
-	add rdi, 7
+	add rdi, 32
 
 end:
 	mov rax, rdi

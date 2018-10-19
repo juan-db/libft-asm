@@ -33,9 +33,9 @@ int main(void)
 		tests_passed_print("isascii");
 	if (!ctype_test_compare_ctype("isprint", &ft_isprint, &isprint))
 		tests_passed_print("isprint");
-	if (!ctype_test_compare_ctype("toupper", &ft_toupper, &toupper))
+	if (!tox_test_compare_tox("toupper", &ft_toupper, &toupper))
 		tests_passed_print("toupper");
-	if (!ctype_test_compare_ctype("tolower", &ft_tolower, &tolower))
+	if (!tox_test_compare_tox("tolower", &ft_tolower, &tolower))
 		tests_passed_print("tolower");
 
 

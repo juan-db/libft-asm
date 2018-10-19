@@ -19,6 +19,7 @@ TEST_SOURCE = test/test.c \
 			  test/ft_bzero_test.c \
 			  test/ft_strcat_test.c \
 			  test/ft_ctype_test.c \
+			  test/ft_tox_test.c \
 			  test/ft_puts_test.c \
 			  test/ft_strlen_test.c \
 			  test/ft_memset_test.c
