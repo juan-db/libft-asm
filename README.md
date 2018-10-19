@@ -16,7 +16,7 @@
 ## Part 2
 
 - ~~strlen~~
-- memset
+- ~~memset~~
 - memcpy
 - strdup (obviously you are allowed to call malloc)
 
