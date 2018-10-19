@@ -29,16 +29,16 @@ int main(void)
 		printf("\033[32mAll \033[4mstrcat\033[0m\033[32m tests passed!\033[0m\n");
 
 
-	// ========= isx =========
-	if (!isx_test_compare_isx("isalpha", &ft_isalpha, &isalpha))
+	// ========= ctype =========
+	if (!ctype_test_compare_ctype("isalpha", &ft_isalpha, &isalpha))
 		printf("\033[32mAll \033[4misalpha\033[0m\033[32m tests passed!\033[0m\n");
-	if (!isx_test_compare_isx("isdigit", &ft_isdigit, &isdigit))
+	if (!ctype_test_compare_ctype("isdigit", &ft_isdigit, &isdigit))
 		printf("\033[32mAll \033[4misdigit\033[0m\033[32m tests passed!\033[0m\n");
-	if (!isx_test_compare_isx("isalnum", &ft_isalnum, &isalnum))
+	if (!ctype_test_compare_ctype("isalnum", &ft_isalnum, &isalnum))
 		printf("\033[32mAll \033[4misalnum\033[0m\033[32m tests passed!\033[0m\n");
-	if (!isx_test_compare_isx("isascii", &ft_isascii, &isascii))
+	if (!ctype_test_compare_ctype("isascii", &ft_isascii, &isascii))
 		printf("\033[32mAll \033[4misprint\033[0m\033[32m tests passed!\033[0m\n");
-	if (!isx_test_compare_isx("isprint", &ft_isprint, &isprint))
+	if (!ctype_test_compare_ctype("isprint", &ft_isprint, &isprint))
 		printf("\033[32mAll \033[4misprint\033[0m\033[32m tests passed!\033[0m\n");
 
 

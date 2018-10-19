@@ -6,12 +6,12 @@ int bzero_test_input_validation();
 int bzero_test_input_validation_2();
 int bzero_test_compare_bzero();
 
-// is...
+// ctype
 /**
  *	ctype test function - accepts an integer argument and returns an integer.
  */
-typedef int(*isx_fun)(int);
-int isx_test_compare_isx(const char *name, isx_fun ft_isx, isx_fun isx);
+typedef int(*ctype_fun)(int);
+int ctype_test_compare_ctype(const char *name, ctype_fun ft_ctype, ctype_fun ctype);
 
 // strlen
 int strlen_test_input_validation_null_str();

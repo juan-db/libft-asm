@@ -5,10 +5,10 @@
 /**
  *	Returns non-zero if the test fails. 
  */
-static int test_pass(const char *name, int c, isx_fun ft_isx, isx_fun isx)
+static int test_pass(const char *name, int c, ctype_fun ft_ctype, ctype_fun ctype)
 {
-	int expected = isx(c);
-	int actual = ft_isx(c);
+	int expected = ctype(c);
+	int actual = ft_ctype(c);
 	if ((actual && !expected) || (!actual && expected))
 	{
 		fprintf(stderr, "\033[31mft_%s does not match %s with value %hhu ('%c')\n"
@@ -25,18 +25,18 @@ static int test_pass(const char *name, int c, isx_fun ft_isx, isx_fun isx)
 /**
  *	Returns non-zero if the tests failed.
  */
-int isx_test_compare_isx(const char *name, isx_fun ft_isx, isx_fun isx)
+int ctype_test_compare_ctype(const char *name, ctype_fun ft_ctype, ctype_fun ctype)
 {
 	unsigned char c = 0;
 	int failed = 0;
 	for (unsigned char e = 0 - 1; c < e; ++c)
 	{
-		if (test_pass(name, c, ft_isx, isx))
+		if (test_pass(name, c, ft_ctype, ctype))
 		{
 			failed = 1;
 		}
 	}
-	if (test_pass(name, c, ft_isx, isx))
+	if (test_pass(name, c, ft_ctype, ctype))
 	{
 		failed = 1;
 	}
