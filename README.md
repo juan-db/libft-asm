@@ -7,7 +7,7 @@
 - ~~isalpha~~
 - ~~isdigit~~
 - ~~isalnum~~
-- isascii
+- ~~isascii~~
 - ~~isprint~~
 - toupper
 - tolower
