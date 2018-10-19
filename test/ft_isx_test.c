@@ -2,8 +2,6 @@
 #include <ctype.h>
 #include "test.h"
 
-typedef int(*isx_fun)(int);
-
 /**
  *	Returns non-zero if the test fails. 
  */
@@ -14,7 +12,8 @@ static int test_pass(const char *name, int c, isx_fun ft_isx, isx_fun isx)
 	if ((actual && !expected) || (!actual && expected))
 	{
 		fprintf(stderr, "\033[31mft_%s does not match %s with value %hhu ('%c')\n"
-						"Expected: %d; Actual: %d\033[0m\n", name, name, c, c, expected, actual);
+						"Expected: %d; Actual: %d\033[0m\n", name, name,
+						(unsigned char)c, (unsigned char)c, expected, actual);
 		return 1;
 	}
 	else
@@ -32,12 +31,12 @@ int isx_test_compare_isx(const char *name, isx_fun ft_isx, isx_fun isx)
 	int failed = 0;
 	for (unsigned char e = 0 - 1; c < e; ++c)
 	{
-		if (!test_pass(name, c, ft_isx, isx))
+		if (test_pass(name, c, ft_isx, isx))
 		{
 			failed = 1;
 		}
 	}
-	if (!test_pass(name, c, ft_isx, isx))
+	if (test_pass(name, c, ft_isx, isx))
 	{
 		failed = 1;
 	}
