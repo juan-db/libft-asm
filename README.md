@@ -9,8 +9,8 @@
 - ~~isalnum~~
 - ~~isascii~~
 - ~~isprint~~
-- toupper
-- tolower
+- ~~toupper~~
+- ~~tolower~~
 - ~~puts~~ (obviously, you can use the write syscall)
 
 ## Part 2
