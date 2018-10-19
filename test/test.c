@@ -40,6 +40,10 @@ int main(void)
 		printf("\033[32mAll \033[4misprint\033[0m\033[32m tests passed!\033[0m\n");
 	if (!ctype_test_compare_ctype("isprint", &ft_isprint, &isprint))
 		printf("\033[32mAll \033[4misprint\033[0m\033[32m tests passed!\033[0m\n");
+	if (!ctype_test_compare_ctype("toupper", &ft_toupper, &toupper))
+		printf("\033[32mAll \033[4mtoupper\033[0m\033[32m tests passed!\033[0m\n");
+	if (!ctype_test_compare_ctype("tolower", &ft_tolower, &tolower))
+		printf("\033[32mAll \033[4mtolower\033[0m\033[32m tests passed!\033[0m\n");
 
 
 	// ========= puts =========

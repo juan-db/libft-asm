@@ -6,6 +6,8 @@ SOURCE = source/ft_bzero.s \
 		 source/ft_isalnum.s \
 		 source/ft_isascii.s \
 		 source/ft_isprint.s \
+		 source/ft_toupper.s \
+		 source/ft_tolower.s \
 		 source/ft_puts.s \
 		 source/ft_strlen.s
 INCLUDE = -Iinclude
