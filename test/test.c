@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <ctype.h>
+#include "libfts.h"
 #include "test.h"
 
 int main(void)
@@ -13,14 +15,14 @@ int main(void)
 	if (!bzero_result)
 		printf("\033[32mAll \033[4mbzero\033[0m\033[32m tests passed!\033[0m\n");
 
-	if (!isalpha_test_compare_isalpha())
+	if (!isx_test_compare_isx("isalpha", &ft_isalpha, &isalpha))
 		printf("\033[32mAll \033[4misalpha\033[0m\033[32m tests passed!\033[0m\n");
-	if (!isdigit_test_compare_isdigit())
-		printf("\033[32mAll \033[4misalpha\033[0m\033[32m tests passed!\033[0m\n");
-	if (!isalnum_test_compare_isalnum())
-		printf("\033[32mAll \033[4misalpha\033[0m\033[32m tests passed!\033[0m\n");
-	if (!isprint_test_compare_isprint())
-		printf("\033[32mAll \033[4misalpha\033[0m\033[32m tests passed!\033[0m\n");
+	if (!isx_test_compare_isx("isdigit", &ft_isdigit, &isdigit))
+		printf("\033[32mAll \033[4misdigit\033[0m\033[32m tests passed!\033[0m\n");
+	if (!isx_test_compare_isx("isalnum", &ft_isalnum, &isalnum))
+		printf("\033[32mAll \033[4misalnum\033[0m\033[32m tests passed!\033[0m\n");
+	if (!isx_test_compare_isx("isprint", &ft_isprint, &isprint))
+		printf("\033[32mAll \033[4misprint\033[0m\033[32m tests passed!\033[0m\n");
 	
 
 	int strlen_result = 0;

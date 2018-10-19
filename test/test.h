@@ -7,14 +7,19 @@ int bzero_test_input_validation_2();
 int bzero_test_compare_bzero();
 
 // is...
-// isalpha
-int isalpha_test_compare_isalpha();
-// isdigit
-int isdigit_test_compare_isdigit();
-// isalnum
-int isalnum_test_compare_isalnum();
-// isprint
-int isprint_test_compare_isprint();
+/**
+ *	ctype test function - accepts an integer argument and returns an integer.
+ */
+typedef int(*isx_fun)(int);
+int isx_test_compare_isx(const char *name, isx_fun ft_isx, isx_fun isx);
+// // isalpha
+// int isalpha_test_compare_isalpha();
+// // isdigit
+// int isdigit_test_compare_isdigit();
+// // isalnum
+// int isalnum_test_compare_isalnum();
+// // isprint
+// int isprint_test_compare_isprint();
 
 // strlen
 int strlen_test_input_validation_null_str();
