@@ -9,7 +9,8 @@ SOURCE = source/ft_bzero.s \
 		 source/ft_toupper.s \
 		 source/ft_tolower.s \
 		 source/ft_puts.s \
-		 source/ft_strlen.s
+		 source/ft_strlen.s \
+		 source/ft_memset.s
 INCLUDE = -Iinclude
 OBJECT = $(SOURCE:.s=.o)
 
@@ -19,7 +20,8 @@ TEST_SOURCE = test/test.c \
 			  test/ft_strcat_test.c \
 			  test/ft_ctype_test.c \
 			  test/ft_puts_test.c \
-			  test/ft_strlen_test.c
+			  test/ft_strlen_test.c \
+			  test/ft_memset_test.c
 			  # test/ft_isalpha_test.c \
 			  # test/ft_isdigit_test.c \
 			  # test/ft_isalnum_test.c \

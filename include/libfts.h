@@ -15,7 +15,7 @@ int		ft_tolower(int c);
 int		ft_puts(const char* s);
 
 size_t	ft_strlen(const char* s);
-// ft_memset // TODO
+void*	ft_memset(void* b, int c, size_t len);
 // ft_memcpy // TODO
 // ft_strdup // TODO
 

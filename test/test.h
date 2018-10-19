@@ -1,6 +1,8 @@
 #ifndef TEST_TEST_H
 #define TEST_TEST_H
 
+typedef int(*test_fun)();
+
 // bzero
 int bzero_test_input_validation();
 int bzero_test_input_validation_2();
@@ -27,5 +29,12 @@ int puts_test_compare_puts_empty_string();
 int strcat_test_input_validation_null_str();
 int strcat_test_compare_strcat();
 int strcat_test_compare_strcat_empty_string();
+
+// memset
+int memset_test_input_validation_null_str();
+int memset_test_input_validation_negative_len();
+int memset_test_compare_memset();
+int memset_test_compare_memset_larger_than_char_value();
+int memset_test_compare_memset_zero_nbyte();
 
 #endif
