@@ -69,6 +69,11 @@ int main(void)
 							   &memcpy_test_compare_memcpy,
 							   &memcpy_test_compare_memcpy_zero_nbyte};
 	test_suite("memcpy", memcpy_tests, sizeof(memcpy_tests) / sizeof(test_fun));
+
+	test_fun strdup_tests[] = {&strdup_test_input_validation_null_str,
+							   &strdup_test_compare_strdup,
+							   &strdup_test_compare_strdup_empty_string};
+	test_suite("strdup", strdup_tests, sizeof(strdup_tests) / sizeof(test_fun));
 }
 
 static void test_suite(const char *name, test_fun* test_funs, int test_count)

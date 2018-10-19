@@ -89,12 +89,16 @@ int memset_test_compare_memset_zero_nbyte()
 
 static void print_array(FILE* stream, void* s, size_t bytes)
 {
-	unsigned char* buff = (unsigned char*)s;
-	fprintf(stream, "%hhu", *buff);
-	++buff;
-	for (size_t counter = 0; counter < bytes; ++counter)
+	if (bytes > 0)
 	{
-		fprintf(stream, ", %hhu", *buff);
+		unsigned char* buff = (unsigned char*)s;
+		fprintf(stream, "%hhu (%c)", *buff, *buff);
+		++buff;
+		while (--bytes)
+		{
+			fprintf(stream, ", %hhu (%c)", *buff, *buff);
+			++buff;
+		}
+		fprintf(stream, "\n");
 	}
-	fprintf(stream, "\n");
 }

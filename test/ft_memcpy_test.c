@@ -63,6 +63,7 @@ int memcpy_test_compare_memcpy_zero_nbyte()
 
 	memcpy((void*)expected, str, 0);
 	ft_memcpy((void*)actual, str, 0);
+
 	if (memcmp((void*)expected, (void*)actual, 16))
 	{
 		fprintf(stderr, "\033[31mft_memcpy does not match the behaviour of memcpy with input [char[16], \"%s\", 0]\n", str);
@@ -80,12 +81,16 @@ int memcpy_test_compare_memcpy_zero_nbyte()
 
 static void print_array(FILE* stream, void* s, size_t bytes)
 {
-	unsigned char* buff = (unsigned char*)s;
-	fprintf(stream, "%hhu", *buff);
-	++buff;
-	for (size_t counter = 0; counter < bytes; ++counter)
+	if (bytes > 0)
 	{
-		fprintf(stream, ", %hhu", *buff);
+		unsigned char* buff = (unsigned char*)s;
+		fprintf(stream, "%hhu (%c)", *buff, *buff);
+		++buff;
+		while (--bytes)
+		{
+			fprintf(stream, ", %hhu (%c)", *buff, *buff);
+			++buff;
+		}
+		fprintf(stream, "\n");
 	}
-	fprintf(stream, "\n");
 }
