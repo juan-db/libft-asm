@@ -63,7 +63,7 @@ Architecture (describes register purposes):
 x86 opcode and instruction set reference:
 - <http://ref.x86asm.net/> (see the table near the top of the page for the differences between the versions)
 
-Not exactly sure what this is but I used the x86-64 psABI version 1.0 dcoument for register reference on p. 23 (version 1, Jan 28, 2018).
+Not exactly sure what this is but I used the x86-64 psABI version 1.0 document for register reference on p. 23 (version 1, Jan 28, 2018).
 The document contains a lot of information on the x86-64 architecture:
 - <https://github.com/hjl-tools/x86-psABI/wiki/X86-psABI>
 
