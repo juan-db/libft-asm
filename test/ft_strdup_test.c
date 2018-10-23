@@ -4,8 +4,6 @@
 #include "test.h"
 #include "libfts.h"
 
-static void print_array(FILE* stream, void* s, size_t bytes);
-
 int strdup_test_input_validation_null_str()
 {
 	ft_strdup(NULL);
@@ -24,7 +22,7 @@ int strdup_test_compare_strdup()
 	if (strcmp(expected, actual))
 	{
 		fprintf(stderr, "\033[31mft_strdup does not match the behaviour of strdup with input \"%s\"\n"
-						"Expected: '%s'\nActual: '%s'\n", str, expected, actual);
+						"Expected: '%s'\nActual: '%s'\033[0m\n", str, expected, actual);
 		free(expected);
 		free(actual);
 		return 1;
@@ -48,7 +46,7 @@ int strdup_test_compare_strdup_empty_string()
 	if (strcmp(expected, actual))
 	{
 		fprintf(stderr, "\033[31mft_strdup does not match the behaviour of strdup with input \"%s\"\n"
-						"Expected: '%s'\nActual: '%s'\n", str, expected, actual);
+						"Expected: '%s'\nActual: '%s'\033[0m\n", str, expected, actual);
 		free(expected);
 		free(actual);
 		return 1;

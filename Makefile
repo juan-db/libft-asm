@@ -11,7 +11,8 @@ SOURCE = source/ft_bzero.s \
 		 source/ft_puts.s \
 		 source/ft_strlen.s \
 		 source/ft_memset.s \
-		 source/ft_memcpy.s
+		 source/ft_memcpy.s \
+		 source/ft_strdup.s
 INCLUDE = -Iinclude
 OBJECT = $(SOURCE:.s=.o)
 
@@ -24,7 +25,8 @@ TEST_SOURCE = test/test.c \
 			  test/ft_puts_test.c \
 			  test/ft_strlen_test.c \
 			  test/ft_memset_test.c \
-			  test/ft_memcpy_test.c
+			  test/ft_memcpy_test.c \
+			  test/ft_strdup_test.c
 TEST_INCLUDE = -Itest
 
 TEST_OBJECT = $(TEST_SOURCE:.c=.o)
@@ -58,3 +60,5 @@ cleantests:
 
 fcleantests: cleantests
 	rm -rf $(TEST_NAME)
+
+.PHONY: all clean fclean re runtests cleantests fcleantests

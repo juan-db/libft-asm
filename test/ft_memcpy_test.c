@@ -44,6 +44,7 @@ int memcpy_test_compare_memcpy()
 		print_array(stderr, expected, 16);
 		fprintf(stderr, "Actual: ");
 		print_array(stderr, actual, 16);
+		fprintf(stderr, "\033[0m");
 		return 1;
 	}
 	else
@@ -71,6 +72,7 @@ int memcpy_test_compare_memcpy_zero_nbyte()
 		print_array(stderr, expected, 16);
 		fprintf(stderr, "Actual: ");
 		print_array(stderr, actual, 16);
+		fprintf(stderr, "\033[0m");
 		return 1;
 	}
 	else

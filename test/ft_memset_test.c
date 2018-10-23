@@ -32,6 +32,7 @@ int memset_test_compare_memset()
 		print_array(stderr, expected, 16);
 		fprintf(stderr, "Actual: ");
 		print_array(stderr, actual, 16);
+		fprintf(stderr, "\033[0m");
 		return 1;
 	}
 	else
@@ -55,6 +56,7 @@ int memset_test_compare_memset_larger_than_char_value()
 		print_array(stderr, expected, 16);
 		fprintf(stderr, "Actual: ");
 		print_array(stderr, actual, 16);
+		fprintf(stderr, "\033[0m");
 		return 1;
 	}
 	else
