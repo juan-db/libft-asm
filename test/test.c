@@ -67,6 +67,7 @@ int main(void)
 							   &memcpy_test_input_validation_null_src,
 							   &memcpy_test_input_validation_negative_n,
 							   &memcpy_test_compare_memcpy,
+							   &memcpy_test_compare_memcpy_half_string,
 							   &memcpy_test_compare_memcpy_zero_nbyte};
 	test_suite("memcpy", memcpy_tests, sizeof(memcpy_tests) / sizeof(test_fun));
 

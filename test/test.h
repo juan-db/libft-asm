@@ -43,6 +43,7 @@ int memcpy_test_input_validation_null_dest();
 int memcpy_test_input_validation_null_src();
 int memcpy_test_input_validation_negative_n();
 int memcpy_test_compare_memcpy();
+int memcpy_test_compare_memcpy_half_string();
 int memcpy_test_compare_memcpy_zero_nbyte();
 
 // strdup
