@@ -19,6 +19,6 @@ void*	ft_memset(void* b, int c, size_t len);
 void*	ft_memcpy(void* dst, const void* src, size_t n);
 char*	ft_strdup(const char* str);
 
-// ft_cat // TODO
+void	ft_cat(int fildes);
 
 #endif
