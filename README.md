@@ -22,7 +22,7 @@
 
 ## Part 3
 
-To conclude, you must code a ft_cat function which will take a file descriptor (for
+To conclude, you must code a ~~ft_cat~~ function which will take a file descriptor (for
 example 0...) as argument and that will have the same behavior as the cat command it’ll
 return void.
 
