@@ -77,6 +77,12 @@ int main(void)
 							   &strdup_test_compare_strdup,
 							   &strdup_test_compare_strdup_empty_string};
 	test_suite("strdup", strdup_tests, sizeof(strdup_tests) / sizeof(test_fun));
+
+	// ========= cat =========
+	test_fun cat_tests[] = {&cat_test_read_empty_file,
+							&cat_test_read_regular_file,
+							&cat_test_read_large_file};
+	test_suite("cat", cat_tests, sizeof(cat_tests) / sizeof(test_fun));
 }
 
 static void test_suite(const char *name, test_fun* test_funs, int test_count)

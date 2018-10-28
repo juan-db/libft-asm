@@ -51,4 +51,9 @@ int strdup_test_input_validation_null_str();
 int strdup_test_compare_strdup();
 int strdup_test_compare_strdup_empty_string();
 
+// cat
+int cat_test_read_empty_file();
+int cat_test_read_regular_file();
+int cat_test_read_large_file();
+
 #endif
