@@ -12,7 +12,8 @@ SOURCE = source/ft_bzero.s \
 		 source/ft_strlen.s \
 		 source/ft_memset.s \
 		 source/ft_memcpy.s \
-		 source/ft_strdup.s
+		 source/ft_strdup.s \
+		 source/ft_cat.s
 INCLUDE = -Iinclude
 OBJECT = $(SOURCE:.s=.o)
 
@@ -26,7 +27,8 @@ TEST_SOURCE = test/test.c \
 			  test/ft_strlen_test.c \
 			  test/ft_memset_test.c \
 			  test/ft_memcpy_test.c \
-			  test/ft_strdup_test.c
+			  test/ft_strdup_test.c \
+			  test/ft_cat_test.c
 TEST_INCLUDE = -Itest
 
 TEST_OBJECT = $(TEST_SOURCE:.c=.o)
