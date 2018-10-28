@@ -81,7 +81,8 @@ int main(void)
 	// ========= cat =========
 	test_fun cat_tests[] = {&cat_test_read_empty_file,
 							&cat_test_read_regular_file,
-							&cat_test_read_large_file};
+							&cat_test_read_large_file,
+							&cat_test_read_from_stdin};
 	test_suite("cat", cat_tests, sizeof(cat_tests) / sizeof(test_fun));
 }
 

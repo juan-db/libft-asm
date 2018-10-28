@@ -55,5 +55,6 @@ int strdup_test_compare_strdup_empty_string();
 int cat_test_read_empty_file();
 int cat_test_read_regular_file();
 int cat_test_read_large_file();
+int cat_test_read_from_stdin();
 
 #endif
