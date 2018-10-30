@@ -29,6 +29,7 @@ int cat_test_read_large_file()
 
 int cat_test_read_from_stdin()
 {
+	fprintf(stderr, "\033[34mReading from \033[1m%s\033[0m (\033[1;34m%d\033[0m)\n", "stdin", 0);
 	ft_cat(0);
 	return 0;
 }
