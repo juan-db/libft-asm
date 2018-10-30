@@ -5,6 +5,7 @@
 
 static void test_suite(const char *name, test_fun* test_funs, int test_count);
 static void tests_passed_print(const char* name);
+static void tests_failed_print(const char* name);
 
 int main(void)
 {
@@ -62,7 +63,7 @@ int main(void)
 	test_suite("memset", memset_tests, sizeof(memset_tests) / sizeof(test_fun));
 
 
-	// ========= memset =========
+	// ========= memcpy =========
 	test_fun memcpy_tests[] = {&memcpy_test_input_validation_null_dest,
 							   &memcpy_test_input_validation_null_src,
 							   &memcpy_test_input_validation_negative_n,
@@ -72,7 +73,7 @@ int main(void)
 	test_suite("memcpy", memcpy_tests, sizeof(memcpy_tests) / sizeof(test_fun));
 
 
-	// ========= memset =========
+	// ========= strdup =========
 	test_fun strdup_tests[] = {&strdup_test_input_validation_null_str,
 							   &strdup_test_compare_strdup,
 							   &strdup_test_compare_strdup_empty_string};
@@ -96,7 +97,11 @@ static void test_suite(const char *name, test_fun* test_funs, int test_count)
 			failed = 1;
 		}
 	}
-	if (!failed)
+	if (failed)
+	{
+		tests_failed_print(name);
+	}
+	else
 	{
 		tests_passed_print(name);
 	}
@@ -105,4 +110,9 @@ static void test_suite(const char *name, test_fun* test_funs, int test_count)
 static void tests_passed_print(const char* name)
 {
 	fprintf(stderr, "\033[32mAll \033[4m%s\033[0m\033[32m tests passed!\033[0m\n", name);
+}
+
+static void tests_failed_print(const char* name)
+{
+	fprintf(stderr, "\033[31mSome \033[4m%s\033[0m\033[31m tests failed.\033[0m\n", name);
 }

@@ -4,6 +4,8 @@
 #include "test.h"
 #include "libfts.h"
 
+char* ft_strdup(const char* s1);
+
 int strdup_test_input_validation_null_str()
 {
 	ft_strdup(NULL);

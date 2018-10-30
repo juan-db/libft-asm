@@ -4,6 +4,7 @@
 #include "libfts.h"
 
 static void print_array(FILE* stream, void* s, size_t bytes);
+void* ft_memcpy(void* dst, const void* src, size_t n);
 
 int memcpy_test_input_validation_null_dest()
 {
