@@ -30,7 +30,7 @@ return void.
 ## Nasm on macOS
 
 - Stack must be 16-bit aligned.
-- Symbols must be prefixed with an underscore (_printf).
+- Symbols must be prefixed with an underscore (e.g. _printf).
 - Syscalls on x86_64 uses the same opcodes as x86.
 - Syscall opcodes must be offset by x200000, i.e. a syscall to write (usually 0x4) would be 0x2000004 (2, five 0's, 4).
 
@@ -56,6 +56,7 @@ strlen (a little extra info on rep and scasb):
 
 Syscalls/interfacing with Linux:
 - <https://en.wikibooks.org/wiki/X86_Assembly/Interfacing_with_Linux#syscall>
+- <https://syscalls64.paolostivanin.com/>
 
 Architecture (describes register purposes):
 - <https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture>
